@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using InsCompany.DataModel.DataContext;
 using InsCompany.DataModel.Models;
 
-namespace InsCompany.DataModel.Repository
+namespace InsCompany.DataModel.Repository.RiskRepository
 {
     public class RiskRepository : Repository, IRiskRepository
     {
         private readonly InsCompanyContext _db;
-        
+
         public RiskRepository(InsCompanyContext context)
         {
             _db = context;
@@ -32,7 +31,7 @@ namespace InsCompany.DataModel.Repository
 
         public void Edit(Risk updatedRisk)
         {
-            Update(updatedRisk, risk => risk.Name, risk => risk.Year);
+            Update(updatedRisk, risk => risk.Name, risk => risk.YearlyPrice);
         }
 
         public void Delete(int riskId)

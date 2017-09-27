@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using InsCompany.DataModel.Models;
 
-namespace InsCompany.DataModel.Service.InsuranceCompany.Interfaces
+namespace InsCompany.DataModel.InsuranceCompany.Interfaces
 {
     internal interface IInsuranceCompanyRisk
     {

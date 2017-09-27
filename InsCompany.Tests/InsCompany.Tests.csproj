@@ -51,6 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseTest.cs" />
+    <Compile Include="PolicyRepositoryTest.cs" />
+    <Compile Include="PolicyServiceTest.cs" />
     <Compile Include="RiskRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

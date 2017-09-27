@@ -11,8 +11,15 @@ namespace InsCompany.Tests
         public virtual void Init()
         {
             _db = new InsCompanyContext();
-            _db.Database.Create();
-            _db.SaveChanges();
+
+            if (!_db.Database.Exists())
+            {
+                _db.Database.Create();
+                _db.SaveChanges();
+            }
+
+            SetTestData();
+
         }
 
         [TearDown]
@@ -21,5 +28,8 @@ namespace InsCompany.Tests
             _db.Database.Delete();
             _db.SaveChanges();
         }
+
+        internal virtual void SetTestData() { }
+
     }
 }

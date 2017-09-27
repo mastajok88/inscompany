@@ -1,17 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using InsCompany.DataModel.InsuranceCompany.Interfaces;
 using InsCompany.DataModel.Models;
-using InsCompany.DataModel.Service.InsuranceCompany.Interfaces;
 
-namespace InsCompany.DataModel.Service.InsuranceCompany
+namespace InsCompany.DataModel.InsuranceCompany
 {
-    public class InsuranceCompany : IInsuranceCompany, IInsuranceCompanyPolicy, IInsuranceCompanyRisk
+    sealed class InsuranceCompany : IInsuranceCompany, IInsuranceCompanyPolicy, IInsuranceCompanyRisk
     {
+
+        private static readonly InsuranceCompany _instance = new InsuranceCompany();
+
+        public InsuranceCompany()
+        {
+            
+        }
+
         public string Name { get; }
+
         public IList<Risk> AvailableRisks { get; set; }
        
         public void AddRisk(string nameOfInsuredObject, Risk risk, DateTime validFrom)
         {
+
             throw new NotImplementedException();
         }
 

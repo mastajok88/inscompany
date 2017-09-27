@@ -1,4 +1,4 @@
-﻿namespace InsCompany.DataModel.Service.InsuranceCompany.Interfaces
+﻿namespace InsCompany.DataModel.InsuranceCompany.Interfaces
 {
     public interface IInsuranceCompany
     {

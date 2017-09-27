@@ -7,9 +7,11 @@ namespace InsCompany.DataModel.DataContext
     {
         public DbSet<Risk> Risks { get; set; }
 
+        public DbSet<Policy> Policies { get; set; }
+
         public InsCompanyContext() : base("name=TestDefault")
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<InsCompanyContext>());
+            Database.SetInitializer(new DropCreateDatabaseAlways<InsCompanyContext>());
         }
     }
 }

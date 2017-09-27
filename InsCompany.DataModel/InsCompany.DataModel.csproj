@@ -106,10 +106,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\InsuranceCompany.cs" />
     <Compile Include="Models\Policy.cs" />
     <Compile Include="Repository\IRepository.cs" />
-    <Compile Include="Repository\IRiskRepository.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="DataContext\InsCompanyContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -117,12 +115,17 @@
     </Compile>
     <Compile Include="Models\Risk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\PolicyRepository\IPolicyRepository.cs" />
+    <Compile Include="Repository\PolicyRepository\PolicyRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
-    <Compile Include="Repository\RiskRepository.cs" />
-    <Compile Include="Service\InsuranceCompany\Interfaces\IInsuranceCompanyPolicy.cs" />
-    <Compile Include="Service\InsuranceCompany\Interfaces\IInsuranceCompanyRisk.cs" />
-    <Compile Include="Service\InsuranceCompany\Interfaces\IInsuranceCopany.cs" />
-    <Compile Include="Service\InsuranceCompany\InsuranceCompany.cs" />
+    <Compile Include="Repository\RiskRepository\IRiskRepository.cs" />
+    <Compile Include="Repository\RiskRepository\RiskRepository.cs" />
+    <Compile Include="InsuranceCompany\Interfaces\IInsuranceCompanyPolicy.cs" />
+    <Compile Include="InsuranceCompany\Interfaces\IInsuranceCompanyRisk.cs" />
+    <Compile Include="InsuranceCompany\Interfaces\IInsuranceCopany.cs" />
+    <Compile Include="InsuranceCompany\InsuranceCompany.cs" />
+    <Compile Include="Service\IPolicyService.cs" />
+    <Compile Include="Service\PolicyService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
