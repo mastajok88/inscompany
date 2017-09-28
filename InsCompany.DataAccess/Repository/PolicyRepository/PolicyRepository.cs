@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Data.Entity.Migrations;
+using System.Linq;
 using InsCompany.DataAccess.DataContext;
 using InsCompany.DataAccess.Models;
 
-namespace InsCompany.DataModel.Repository.PolicyRepository
+namespace InsCompany.DataAccess.Repository.PolicyRepository
 {
     public class PolicyRepository : IPolicyRepository
     {

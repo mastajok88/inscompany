@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using InsCompany.DataAccess.Models;
 
-namespace InsCompany.DataModel.Repository.RiskRepository
+namespace InsCompany.DataAccess.Repository.RiskRepository
 {
     public interface IRiskRepository
     {

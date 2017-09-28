@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsCompany.DataModel", "InsCompany.DataModel\InsCompany.DataModel.csproj", "{39182ED9-0154-48D6-B5C4-AF470D10372F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsCompany.Service", "InsCompany.DataModel\InsCompany.Service.csproj", "{39182ED9-0154-48D6-B5C4-AF470D10372F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsCompany.Tests", "InsCompany.Tests\InsCompany.Tests.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsCompany.Service.Tests", "InsCompany.Tests\InsCompany.Service.Tests.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsCompany.DataAccess", "InsCompany.DataAccess\InsCompany.DataAccess.csproj", "{489D6E0C-0E40-4C53-B66C-1DD157EF56D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsCompany.DataAccess.Test", "InsCompany.DataAccess.Test\InsCompany.DataAccess.Test.csproj", "{2611C6DB-E90C-4E44-B9CE-AD9EF8CF93BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{489D6E0C-0E40-4C53-B66C-1DD157EF56D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{489D6E0C-0E40-4C53-B66C-1DD157EF56D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{489D6E0C-0E40-4C53-B66C-1DD157EF56D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2611C6DB-E90C-4E44-B9CE-AD9EF8CF93BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2611C6DB-E90C-4E44-B9CE-AD9EF8CF93BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2611C6DB-E90C-4E44-B9CE-AD9EF8CF93BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2611C6DB-E90C-4E44-B9CE-AD9EF8CF93BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,13 +2,23 @@
 using System.Collections.Generic;
 using InsCompany.DataAccess.DataContext;
 using InsCompany.DataAccess.Models;
+using InsCompany.DataAccess.Repository.PolicyRepository;
+using InsCompany.DataAccess.Repository.RiskRepository;
+using InsCompany.DataModel.Service.PolicyService;
 using NUnit.Framework;
 
 namespace InsCompany.Tests
 {
-    public abstract class BaseTest
+    public abstract class BaseServiceTest
     {
         internal InsCompanyContext _db;
+
+        protected PolicyService _policyService;
+
+        protected PolicyRepository _policyRepository;
+
+        protected RiskRepository _riskRepository;
+
         public List<Risk> TestRisks { get; private set; }
 
         public Policy TestPolicy { get; private set; }
@@ -17,6 +27,12 @@ namespace InsCompany.Tests
         public virtual void Init()
         {
             _db = new InsCompanyContext();
+
+            _policyRepository = new PolicyRepository(_db);
+
+            _riskRepository = new RiskRepository(_db);
+
+            _policyService = new PolicyService(_policyRepository, _riskRepository);
 
             if (!_db.Database.Exists())
             {

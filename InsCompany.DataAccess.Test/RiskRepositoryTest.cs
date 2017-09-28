@@ -1,11 +1,11 @@
 ﻿using System.Linq;
-using InsCompany.DataModel.Repository.RiskRepository;
+using InsCompany.DataAccess.Repository.RiskRepository;
 using NUnit.Framework;
 
-namespace InsCompany.Tests
+namespace InsCompany.DataAccess.Test
 {
     [TestFixture]
-    public class RiskRepositoryTest : BaseTest
+    public class RiskRepositoryTest : BaseDataAccessTest
     {
         private RiskRepository _riskRepository;
 

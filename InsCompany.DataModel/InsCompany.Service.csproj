@@ -44,12 +44,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -110,17 +104,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\RiskComparer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\PolicyRepository\IPolicyRepository.cs" />
-    <Compile Include="Repository\PolicyRepository\PolicyRepository.cs" />
-    <Compile Include="Repository\RiskRepository\IRiskRepository.cs" />
-    <Compile Include="Repository\RiskRepository\RiskRepository.cs" />
-    <Compile Include="InsuranceCompany\Interfaces\IInsuranceCompanyPolicy.cs" />
-    <Compile Include="InsuranceCompany\Interfaces\IInsuranceCompanyRisk.cs" />
-    <Compile Include="InsuranceCompany\Interfaces\IInsuranceCopany.cs" />
-    <Compile Include="InsuranceCompany\InsuranceCompany.cs" />
-    <Compile Include="Service\IPolicyService.cs" />
-    <Compile Include="Service\PolicyService.cs" />
+    <Compile Include="Service\InsuranceCompanyService\Interfaces\IInsuranceCompanyPolicy.cs" />
+    <Compile Include="Service\InsuranceCompanyService\Interfaces\IInsuranceCompanyRisk.cs" />
+    <Compile Include="Service\InsuranceCompanyService\Interfaces\IInsuranceCopany.cs" />
+    <Compile Include="Service\InsuranceCompanyService\InsuranceCompany.cs" />
+    <Compile Include="Service\PolicyService\IPolicyService.cs" />
+    <Compile Include="Service\PolicyService\PolicyService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

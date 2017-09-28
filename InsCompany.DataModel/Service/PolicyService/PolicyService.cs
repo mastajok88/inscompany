@@ -1,8 +1,8 @@
 ﻿using InsCompany.DataAccess.Models;
-using InsCompany.DataModel.Repository.PolicyRepository;
-using InsCompany.DataModel.Repository.RiskRepository;
+using InsCompany.DataAccess.Repository.PolicyRepository;
+using InsCompany.DataAccess.Repository.RiskRepository;
 
-namespace InsCompany.DataModel.Service
+namespace InsCompany.DataModel.Service.PolicyService
 {
     public class PolicyService : IPolicyService
     {

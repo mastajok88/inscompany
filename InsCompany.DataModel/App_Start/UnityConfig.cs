@@ -1,10 +1,10 @@
 ﻿using System.Web.Http;
 using InsCompany.DataAccess.DataContext;
-using InsCompany.DataModel.Repository.PolicyRepository;
-using InsCompany.DataModel.Repository.RiskRepository;
+using InsCompany.DataAccess.Repository.PolicyRepository;
+using InsCompany.DataAccess.Repository.RiskRepository;
+using InsCompany.DataModel.Service.PolicyService;
 using Microsoft.Practices.Unity;
 using Unity.WebApi;
-using InsCompany.DataModel.Service;
 
 namespace InsCompany.DataModel.App_Start
 {

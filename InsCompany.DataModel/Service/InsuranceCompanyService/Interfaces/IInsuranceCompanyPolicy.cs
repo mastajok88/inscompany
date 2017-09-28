@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using InsCompany.DataAccess.Models;
 
-namespace InsCompany.DataModel.InsuranceCompany.Interfaces
+namespace InsCompany.DataModel.Service.InsuranceCompanyService.Interfaces
 {
     public interface IInsuranceCompanyPolicy
     {

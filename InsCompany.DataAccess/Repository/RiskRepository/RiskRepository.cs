@@ -4,7 +4,7 @@ using System.Linq;
 using InsCompany.DataAccess.DataContext;
 using InsCompany.DataAccess.Models;
 
-namespace InsCompany.DataModel.Repository.RiskRepository
+namespace InsCompany.DataAccess.Repository.RiskRepository
 {
     public class RiskRepository : IRiskRepository
     {

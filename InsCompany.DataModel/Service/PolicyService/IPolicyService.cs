@@ -1,6 +1,6 @@
 ﻿using InsCompany.DataAccess.Models;
 
-namespace InsCompany.DataModel.Service
+namespace InsCompany.DataModel.Service.PolicyService
 {
     public interface IPolicyService
     {

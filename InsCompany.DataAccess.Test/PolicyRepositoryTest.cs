@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using InsCompany.DataAccess.Models;
-using InsCompany.DataModel.Repository.PolicyRepository;
-using InsCompany.DataModel.Repository.RiskRepository;
+using InsCompany.DataAccess.Repository.PolicyRepository;
+using InsCompany.DataAccess.Repository.RiskRepository;
 using NUnit.Framework;
 
-namespace InsCompany.Tests
+namespace InsCompany.DataAccess.Test
 {
     [TestFixture]
-    public class PolicyRepositoryTest : BaseTest
+    public class PolicyRepositoryTest : BaseDataAccessTest
     {
         private PolicyRepository _policyRepository;
 

@@ -51,10 +51,9 @@
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseTest.cs" />
-    <Compile Include="PolicyRepositoryTest.cs" />
-    <Compile Include="PolicyServiceTest.cs" />
-    <Compile Include="RiskRepositoryTest.cs" />
+    <Compile Include="BaseServiceTest.cs" />
+    <Compile Include="InsuranceCompanyTest.cs" />
+    <Compile Include="PolicyServiceServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -66,9 +65,9 @@
       <Project>{489d6e0c-0e40-4c53-b66c-1dd157ef56d9}</Project>
       <Name>InsCompany.DataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\InsCompany.DataModel\InsCompany.DataModel.csproj">
+    <ProjectReference Include="..\InsCompany.DataModel\InsCompany.Service.csproj">
       <Project>{39182ed9-0154-48d6-b5c4-af470d10372f}</Project>
-      <Name>InsCompany.DataModel</Name>
+      <Name>InsCompany.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
