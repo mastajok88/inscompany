@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using InsCompany.DataModel.Models;
+using InsCompany.DataAccess.Models;
 
 namespace InsCompany.DataModel.Repository.PolicyRepository
 {
@@ -7,12 +7,14 @@ namespace InsCompany.DataModel.Repository.PolicyRepository
     {
         List<Policy> GetList();
 
-        Policy Get(int policyId);
+        Policy Get(int entityId);
 
-        void Add(Policy policy);
+        void Update(Policy[] entities);
 
-        void Edit(Policy policy);
+        Policy Delete(int entityId);
 
-        void Delete(int policyId);
+        Policy RemoveRisk(int entityId, Risk risk);
+
+        Policy AddRisk(int entityId, Risk risk);
     }
 }

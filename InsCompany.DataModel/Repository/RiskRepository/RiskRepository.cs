@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
-using InsCompany.DataModel.DataContext;
-using InsCompany.DataModel.Models;
+using InsCompany.DataAccess.DataContext;
+using InsCompany.DataAccess.Models;
 
 namespace InsCompany.DataModel.Repository.RiskRepository
 {
-    public class RiskRepository : Repository, IRiskRepository
+    public class RiskRepository : IRiskRepository
     {
         private readonly InsCompanyContext _db;
 
@@ -18,27 +19,23 @@ namespace InsCompany.DataModel.Repository.RiskRepository
             return _db.Risks.ToList();
         }
 
-        public Risk Get(int riskId)
+        public Risk Get(int entityId)
         {
-            return _db.Risks.FirstOrDefault(x => x.RiskId == riskId);
+            return _db.Risks.Find(entityId);
         }
 
-        public void Add(Risk risk)
+        public void Update(Risk[] entities)
         {
-            _db.Risks.Add(risk);
+            _db.Risks.AddOrUpdate(entities);
             _db.SaveChanges();
         }
 
-        public void Edit(Risk updatedRisk)
+        public Risk Delete(int entityId)
         {
-            Update(updatedRisk, risk => risk.Name, risk => risk.YearlyPrice);
-        }
-
-        public void Delete(int riskId)
-        {
-            var model = this.Get(riskId);
-            _db.Risks.Remove(model);
+            var entity = this.Get(entityId);
+            var model = _db.Risks.Remove(entity);
             _db.SaveChanges();
+            return model;
         }
     }
 }

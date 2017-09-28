@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using InsCompany.DataModel.Models;
+using InsCompany.DataAccess.Models;
 
 namespace InsCompany.DataModel.Repository.RiskRepository
 {
@@ -7,12 +7,10 @@ namespace InsCompany.DataModel.Repository.RiskRepository
     {
         List<Risk> GetList();
 
-        Risk Get(int riskId);
+        Risk Get(int entityId);
 
-        void Add(Risk risk);
+        void Update(Risk[] entities);
 
-        void Edit(Risk risk);
-
-        void Delete(int riskId);
+        Risk Delete(int entityId);
     }
-    }
+}

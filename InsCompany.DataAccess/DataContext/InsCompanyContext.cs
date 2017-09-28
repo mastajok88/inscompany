@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
-using InsCompany.DataModel.Models;
+using InsCompany.DataAccess.Models;
 
-namespace InsCompany.DataModel.DataContext
+namespace InsCompany.DataAccess.DataContext
 {
     public class InsCompanyContext : DbContext
     {
@@ -9,7 +9,7 @@ namespace InsCompany.DataModel.DataContext
 
         public DbSet<Policy> Policies { get; set; }
 
-        public InsCompanyContext() : base("name=TestDefault")
+        public InsCompanyContext() : base("TestDefault")
         {
             Database.SetInitializer(new DropCreateDatabaseAlways<InsCompanyContext>());
         }

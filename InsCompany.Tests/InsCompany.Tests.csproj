@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>InsCompany.Tests</RootNamespace>
     <AssemblyName>InsCompany.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -48,6 +48,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseTest.cs" />
@@ -61,6 +62,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\InsCompany.DataAccess\InsCompany.DataAccess.csproj">
+      <Project>{489d6e0c-0e40-4c53-b66c-1dd157ef56d9}</Project>
+      <Name>InsCompany.DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\InsCompany.DataModel\InsCompany.DataModel.csproj">
       <Project>{39182ed9-0154-48d6-b5c4-af470d10372f}</Project>
       <Name>InsCompany.DataModel</Name>

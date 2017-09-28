@@ -106,18 +106,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Policy.cs" />
-    <Compile Include="Repository\IRepository.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
-    <Compile Include="DataContext\InsCompanyContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Risk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\PolicyRepository\IPolicyRepository.cs" />
     <Compile Include="Repository\PolicyRepository\PolicyRepository.cs" />
-    <Compile Include="Repository\Repository.cs" />
     <Compile Include="Repository\RiskRepository\IRiskRepository.cs" />
     <Compile Include="Repository\RiskRepository\RiskRepository.cs" />
     <Compile Include="InsuranceCompany\Interfaces\IInsuranceCompanyPolicy.cs" />
@@ -136,7 +131,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\InsCompany.DataAccess\InsCompany.DataAccess.csproj">
+      <Project>{489d6e0c-0e40-4c53-b66c-1dd157ef56d9}</Project>
+      <Name>InsCompany.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

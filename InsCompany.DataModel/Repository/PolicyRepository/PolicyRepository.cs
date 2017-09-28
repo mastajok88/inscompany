@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using InsCompany.DataModel.DataContext;
-using InsCompany.DataModel.Models;
+using System.Data.Entity.Migrations;
+using InsCompany.DataAccess.DataContext;
+using InsCompany.DataAccess.Models;
 
 namespace InsCompany.DataModel.Repository.PolicyRepository
 {
     public class PolicyRepository : IPolicyRepository
     {
         private InsCompanyContext _db;
-
 
         public PolicyRepository(InsCompanyContext context)
         {
@@ -20,25 +20,46 @@ namespace InsCompany.DataModel.Repository.PolicyRepository
             return _db.Policies.ToList();
         }
 
-        public Policy Get(int policyId)
+        public Policy Get(int entityId)
         {
-            return _db.Policies.FirstOrDefault(x => x.PolicyId == policyId);
+            return _db.Policies.Find(entityId);
         }
-    
-        public void Add(Policy policy)
+
+        public void Update(Policy[] entities)
         {
-            _db.Policies.Add(policy);
+            _db.Policies.AddOrUpdate(entities);
             _db.SaveChanges();
         }
 
-        public void Edit(Policy risk)
+        public Policy Delete(int entityId)
         {
-            throw new NotImplementedException();
+            Policy model = this.Get(entityId);
+            Policy entity = _db.Policies.Remove(model);
+            _db.SaveChanges();
+            return entity;
         }
 
-        public void Delete(int riskId)
+        public Policy RemoveRisk(int policyId, Risk risk)
         {
-            throw new NotImplementedException();
+
+            Policy policy = _db.Policies.Find(policyId);
+            if (policy != null)
+            {
+                policy.InsuredRisks.Remove(risk);
+                _db.SaveChanges();
+            }
+            return policy;
+        }
+
+        public Policy AddRisk(int policyId, Risk risk)
+        {
+            Policy policy = _db.Policies.Find(policyId);
+            if (policy != null)
+            {
+                policy.InsuredRisks.Add(risk);
+                _db.SaveChanges();
+            }
+            return policy;
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System.Web.Http;
-using InsCompany.DataModel.DataContext;
+using InsCompany.DataAccess.DataContext;
 using InsCompany.DataModel.Repository.PolicyRepository;
 using InsCompany.DataModel.Repository.RiskRepository;
 using Microsoft.Practices.Unity;

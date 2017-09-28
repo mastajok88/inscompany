@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace InsCompany.DataModel.Models
+namespace InsCompany.DataAccess.Models
 {
-    public class Policy : IPolicy
+    public partial class Policy : IPolicy
     {
         public int PolicyId { get; set; }
 
@@ -13,9 +13,7 @@ namespace InsCompany.DataModel.Models
 
         public DateTime ValidTill { get; set; }
 
-        public decimal Premium { get; set; }
-
-        public IList<Risk> InsuredRisks { get; set; }
+        public virtual IList<Risk> InsuredRisks { get; set; }
     }
 
     public interface IPolicy

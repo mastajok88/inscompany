@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using InsCompany.DataAccess.Models;
 using InsCompany.DataModel.InsuranceCompany.Interfaces;
-using InsCompany.DataModel.Models;
 
 namespace InsCompany.DataModel.InsuranceCompany
 {
